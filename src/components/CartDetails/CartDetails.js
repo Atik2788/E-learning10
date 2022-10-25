@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Google = () => {
+const CartDetails = () => {
     return (
         <div>
-            google
+            Details
         </div>
     );
 };
 
-export default Google;
+export default CartDetails;

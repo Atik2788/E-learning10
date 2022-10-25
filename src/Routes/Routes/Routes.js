@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom"
 import About from "../../components/About/About"
 import Blog from "../../components/Blog/Blog"
+import CartDetails from "../../components/CartDetails/CartDetails"
 import Faq from "../../components/Faq/Faq"
 import Home from "../../components/Home/Home"
-import Google from "../../components/Sheared/Google/Google"
+import NotFound from "../../components/NotFound/NotFound"
 import Login from "../../components/Sheared/Login/Login"
 import Register from "../../components/Sheared/Register/Register"
 import Main from "../../layout/Main"
@@ -17,6 +18,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+                
             },
             {
                 path: '/blog',
@@ -31,17 +33,23 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/google',
-                element: <Google></Google>
-            },
-            {
                 path: '/about',
                 element: <About></About>
             },
             {
                 path: '/faq',
                 element: <Faq></Faq>
+            },
+            {
+                path: '/cart-details/:id',
+                element: <CartDetails></CartDetails>,
+                loader:(``)
             }
-        ]
+        ],
+    },
+    {
+        path: '*',
+        element: <NotFound></NotFound>
     }
+
 ])
