@@ -1,15 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import CourseCard from '../CourseCard/CourseCard';
+import CourseCard from "../CourseCard/CourseCard";
 
-
-const CoursesRight = () => {
-    return (
-        <div>
-            <p>am eos. Eos officia dolor eius architecto quibusdam modi incidunt corporis ipsa maxime magni ad facere explicabo impedit quo assumenda dicta, nemo fuga harum, repellendus rerum temporibus iste excepttia consectetur dolorum? Eum ipsum dicta dolorem quo ipsam sapiente consectetur non optio aliquam vel id velit, ullam, tempora, impedit facilis? Molestiae, repellat architecto!</p>
-            <CourseCard></CourseCard>
+const CoursesRight = ({ course }) => {
+  const { name, url, title } = course;
+  return (
+    <div>
+      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <figure>
+          <img className="h-[250px]" src={url} alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title ">{name}</h2>
+          <p className="h-14">{title}</p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default CoursesRight;

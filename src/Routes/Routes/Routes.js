@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import About from "../../components/About/About"
 import Blog from "../../components/Blog/Blog"
 import CartDetails from "../../components/CartDetails/CartDetails"
+import Courses from "../../components/Courses/Courses"
 import Faq from "../../components/Faq/Faq"
 import Home from "../../components/Home/Home"
 import NotFound from "../../components/NotFound/NotFound"
@@ -41,9 +42,14 @@ export const routes = createBrowserRouter([
                 element: <Faq></Faq>
             },
             {
-                path: '/cart-details/:id',
+                path: '/courses',
+                element: <Courses></Courses>
+            },
+            {
+                path: '/cartdetails/:id',
                 element: <CartDetails></CartDetails>,
-                loader:(``)
+                loader:({params}) =>
+                    fetch(`https://elearn-server-atik2788.vercel.app/courses-details/${params.id}`)  
             }
         ],
     },

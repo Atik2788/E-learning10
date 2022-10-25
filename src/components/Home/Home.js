@@ -4,7 +4,7 @@ import Courses from '../Courses/Courses';
 const Home = () => {
     return (
         <div>
-            <div className='lg:flex mt-20 w-11/12 mx-auto'>
+            <div className='lg:flex mt-32 w-11/12 mx-auto'>
                 <div className='w-7/12 '>
                     <h1 className='text-5xl font-semibold'>Become an international 
                     <p className='text-orange-600 font-bold my-2'>3d artist</p> from anywhere.
@@ -18,7 +18,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <Courses></Courses>
+            
         </div>
     );
 };
