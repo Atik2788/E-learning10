@@ -1,14 +1,29 @@
-import React from "react";
-import { Form, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Form, Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { ImGoogle } from "react-icons/im";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
+import { useEffect } from "react";
 
 const Login = () => {
+  const{providerLogin, user, setUser, signIn} = useContext(AuthContext)
 
-    const{providerLogin, user, signIn} = useContext(AuthContext)
-    // console.log(user)
+  const [error, setError] = useState('');
+  const navigate = useNavigate()
+
+  console.log(error)
+  
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+
+  useEffect( () =>{
+    if(user && user.uid){
+      navigate(from, {replace:true});
+    }
+  }
+    ,[from, navigate, user])
 
 
     const googleProvider = new GoogleAuthProvider();
@@ -17,13 +32,17 @@ const Login = () => {
         providerLogin(googleProvider)
         .then(result =>{
             const user = result.user;
-            console.log(user)
+            // console.log(user)
+            setUser(user)
         })
-        .catch(error => console.error(error))
+        .catch(error =>{
+           console.error(error)
+          setError(error.message)
+          })
     }
 
 
-    const handleSignIn = (event) =>{
+    const handleSignIn = event =>{
       event.preventDefault()
       const form = event.target;
       const email = form.email.value;
@@ -34,10 +53,18 @@ const Login = () => {
     signIn(email, password)
     .then(result => {
       const user = result.user;
+      // console.log(user);
       form.reset();
+      setError('')
+      setUser(user)
+
+      // Navigate(from, {replace: true})
 
     })
-    .catch(error=>console.error(error))
+    .catch(error=> {
+      console.error(error)
+      setError(error.message)
+    })
 
     }
 
@@ -93,6 +120,10 @@ const Login = () => {
                     Forgot password?
                   </Link>
                 </label>
+                <label className="label text-red-700">                  
+                    {error}                  
+                </label>
+                
               </div>
               <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">Login</button>
