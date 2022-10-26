@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import './Header.css'
 
 const Header = () => {
     const {user, logOut} = useContext(AuthContext)
@@ -16,11 +17,11 @@ const Header = () => {
     }
 
     return (
-        <div className='mt-0 bg-cyan-100'>
-           <div className="navbar bg-base-500 shadow-xl">
+        <div className='mt-0  sticky bg-opacity-80 bg-blue-50 bg-clip-padding  top-0 w-full blur-filter'>
+           <div className="navbar bg-base-500 ">
             
                 <div className=" navbar">
-                <Link to='/' className="btn btn-ghost normal-case text-5xl font-bold">E-Larn</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-5xl font-bold">E-Learn</Link>
                     <div className="dropdown dropdown-end sm:ml-34">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -79,16 +80,16 @@ const Header = () => {
                         <li><Link className='text-xl font-bold' to='/blog'>Blog</Link></li>
                         <li><Link className='text-xl font-bold' to='/faq'>FAQ</Link></li>
                         <li>
-                        {   user?.uid?
+                        { user?.uid?
                         <>                        
                             {
                                 !user?.photoURL?
                                 <>
                                  {
                                     user?.displayName?
-                                    <span title={user.displayName} className=""><FaUserCircle></FaUserCircle></span>
+                                    <span title={user.displayName} className="text-2xl"><FaUserCircle></FaUserCircle></span>
                                     :
-                                    <span title='User name not found'><FaUserCircle></FaUserCircle></span>
+                                    <span className='text-5xl' title='User name not found'><FaUserCircle></FaUserCircle></span>
                                  }
                                 </>
                                :  

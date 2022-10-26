@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import toast from "react-hot-toast";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 
 const Register = () => {
+  const navigate = useNavigate();
 
   const {signUp, user, setUser} = useContext(AuthContext)
 
@@ -33,11 +34,18 @@ const Register = () => {
     signUp(userInfo.email, userInfo.password)
     .then(result =>{
       const user = result.user;
+      
+
 
       console.log(user);
       setErrors({...errors, general: ""})
       toast.success('success')
       setUser(user)
+
+      if(user){
+        navigate('/')
+      }
+
 
       setErrors({...errors, general: ''});
       

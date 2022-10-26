@@ -18,7 +18,8 @@ const Courses = () => {
         Our Courses
       </h1>
 
-      <div className="lg:flex w-11/12 mx-auto mt-10">
+      <div className="lg:flex w-11/12 mx-auto">
+
         <div className="lg:w-2/6">
           <h3 className="text-3xl text-center lg:text-left font-bold mb-6">
             Course List
@@ -36,11 +37,14 @@ const Courses = () => {
 
         </div>
 
-        <div data-aos="zoom-in" className="w-full p-14 md:grid lg:grid md:grid:cols-2 lg:grid-cols-2 md:gap-5 lg:gap-10 mb-20">
+        <div className=" md:mt-20 lg:mt-0  w-full md:grid md:grid-cols-2 md:gap-5 lg:grid lg:grid-cols-2 lg:gap-10 sm:block mb-20 sm:p-0 md:p-1 mt-10 lg:px-14">
           {courses.map((course) => (
+            <Link key={course.id} to={`/cartdetails/${course.id}`}>
             <CoursesRight key={course.id} course={course}></CoursesRight>
+            </Link>
           ))}
         </div>
+
       </div>
     </div>
   );

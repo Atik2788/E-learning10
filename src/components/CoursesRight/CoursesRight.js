@@ -3,18 +3,23 @@ import { FaStar, IconName } from "react-icons/fa";
 
 
 const CoursesRight = ({ course }) => {
-  const { name, url, title, ratings } = course;
+  const { name, url, title, ratings, price } = course;
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="rounded-xl w-94 bg-base-100 shadow-xl">
         <figure>
-          <img className="h-[250px]" src={url} alt="Shoes" />
+          <img className="h-[250px] rounded-t-xl" src={url} alt="Shoes" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title ">{name}</h2>
+
+        <div className="card-body my-3">
+          <div className="flex justify-between">
+            <span className="card-title text-2xl font-bold">{name}</span>
+            <span className="font-bold text-2xl">{price}</span>
+          </div>
+
           <p className="h-14">{title}</p>
           <p className="text-lg flex">{ratings} <span className="ml-2 text-yellow-500 pt-1"><FaStar></FaStar></span> </p>
-        </div>
+                  </div>
       </div>
     </div>
   );
