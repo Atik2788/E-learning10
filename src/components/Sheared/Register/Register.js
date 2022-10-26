@@ -100,7 +100,7 @@ const Register = () => {
         <div className="">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Register now!</h1>
-            <p className="pt-6 pb-3">
+            <p className="pt-6 pb-3 text-lg font-semibold">
               Already Have an Account?
               <span>
                 {" "}

@@ -36,9 +36,21 @@ const Header = () => {
                         {   user?.uid?
                         <>                        
                             {
-                                user?.photoURL?
-                                <img src={user.photoURL} alt="" />
-                                :  <FaUserCircle></FaUserCircle>
+                                !user?.photoURL?
+                                <>
+                                 {
+                                    user?.displayName?
+                                    <span title={user.displayName} className=""><FaUserCircle></FaUserCircle></span>
+                                    :
+                                    <span title='User name not found'><FaUserCircle></FaUserCircle></span>
+                                 }
+                                </>
+                               :  
+                               <>
+                               <span title={user.displayName} >
+                               <img className='rounded-full w-10' src={user.photoURL} alt="" />
+                               </span>
+                               </>
                             }
                             <span><Link onClick={handleLogOut}  className='text-xl font-bold' to='/login'>Log Out</Link></span>
 

@@ -13,7 +13,7 @@ const CoursesRight = ({ course }) => {
         <div className="card-body">
           <h2 className="card-title ">{name}</h2>
           <p className="h-14">{title}</p>
-          <p className="text-lg flex">{ratings} <span className="ml-2"><FaStar></FaStar></span> </p>
+          <p className="text-lg flex">{ratings} <span className="ml-2 text-yellow-500 pt-1"><FaStar></FaStar></span> </p>
         </div>
       </div>
     </div>

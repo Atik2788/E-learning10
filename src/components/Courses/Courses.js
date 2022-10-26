@@ -36,7 +36,7 @@ const Courses = () => {
 
         </div>
 
-        <div className="w-full p-14 md:grid lg:grid md:grid:cols-2 lg:grid-cols-2 md:gap-5 lg:gap-10 mb-20">
+        <div data-aos="zoom-in" className="w-full p-14 md:grid lg:grid md:grid:cols-2 lg:grid-cols-2 md:gap-5 lg:gap-10 mb-20">
           {courses.map((course) => (
             <CoursesRight key={course.id} course={course}></CoursesRight>
           ))}
