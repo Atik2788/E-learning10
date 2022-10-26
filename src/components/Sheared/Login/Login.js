@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { useEffect } from "react";
-import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const{providerLogin, user, setUser, signIn,} = useContext(AuthContext)
@@ -22,12 +22,12 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
 
 
-  useEffect( () =>{
-    if(user && user.uid){
-      navigate(from, {replace:true});
-    }
-  }
-    ,[from, navigate, user])
+  // useEffect( () =>{
+  //   if(user && user.uid){
+  //     navigate(from, {replace:true});
+  //   }
+  // }
+  //   ,[from, navigate, user])
 
 
 
@@ -37,7 +37,7 @@ const Login = () => {
         providerLogin(googleProvider)
         .then(result =>{
             const user = result.user;
-            setUser(user)
+            navigate(from, {replace: true})
         })
         .catch(error =>{
            console.error(error)
@@ -50,7 +50,8 @@ const Login = () => {
       providerLogin(githubProvider)
       .then(result =>{
         const user = result.user;
-        setUser(user)
+        navigate(from, {replace: true})
+
       })
       .catch(error =>console.error(error))
     }
@@ -60,7 +61,7 @@ const Login = () => {
       providerLogin(facebookProvider)
       .then(result =>{
         const user = result.user;
-        setUser(user)
+        navigate(from, {replace: true})
       })
     }
 
@@ -76,11 +77,9 @@ const Login = () => {
     .then(result => {
       setError('')
       const user = result.user;
-      // console.log(user);
       form.reset();
-      setUser(user)
-
-      // Navigate(from, {replace: true})
+      
+      navigate(from, {replace: true})
 
     })
     .catch(error=> {

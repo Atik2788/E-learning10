@@ -54,8 +54,10 @@ export const routes = createBrowserRouter([
                     fetch(`https://elearn-server-atik2788.vercel.app/courses-details/${params.id}`)  
             },
             {
-                path: '/checkout',
-                element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>
+                path: '/checkout/:id',
+                element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
+                loader:({params}) =>
+                    fetch(`https://elearn-server-atik2788.vercel.app/courses-details/${params.id}`)
             }
         ],
     },

@@ -39,12 +39,9 @@ const Courses = () => {
 
         <div className=" md:mt-20 lg:mt-0  w-full md:grid md:grid-cols-2 md:gap-5 lg:grid lg:grid-cols-2 lg:gap-10 sm:block mb-20 sm:p-0 md:p-1 mt-10 lg:px-14">
           {courses.map((course) => (
-            <Link key={course.id} to={`/cartdetails/${course.id}`}>
-            <CoursesRight key={course.id} course={course}></CoursesRight>
-            </Link>
+            <Link key={course.id} to={`/cartdetails/${course.id}`}><CoursesRight key={course.id} course={course}></CoursesRight></Link>
           ))}
         </div>
-
       </div>
     </div>
   );
