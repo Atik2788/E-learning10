@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react";
 import { FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 
 import welcomeVideo from "../../assets/sleek-welcome-background_wyfvvvz-s__f1bb1126d621e8323d2d2713ce6308bb__P360.mp4";
+import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const CheckOut = () => {
+  const {user} = useContext(AuthContext)
   const course = useLoaderData();
   const { url, price, title, details, author, name, ratings, students, id } =
     course;
@@ -14,7 +17,7 @@ const CheckOut = () => {
       <div className="mt-20">
         <div className="text-center font-bold w-11/12 mx-auto">
           <h1 className="text-4xl">Congratulation !!</h1>
-          <h3 className="text-2xl mt-2">name</h3>
+          <h3 className="text-3xl mt-2">{user.displayName}</h3>
           <p className="text-2xl mt-2">You got lifetime access.</p>
         </div>
 

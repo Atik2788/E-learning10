@@ -20,6 +20,10 @@ When you want to deploy somewhere
 Builds the app for production to the `build` folder.
 Your app is ready to be deployed!
 
+## Deploy in firebase (run)
+* npm run build
+* firebase deploy
+
 # Here some steps.
 * npx create-react-app my-app
 * npm install firebase react-router-dom
