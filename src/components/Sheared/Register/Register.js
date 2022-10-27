@@ -64,18 +64,18 @@ const Register = () => {
               Already Have an Account?
               <span>
                 {" "}
-                <Link to="/login" className="text-green-700">
+                <Link to="/login" className="color-text">
                   Login
                 </Link>
               </span>
             </p>
           </div>
 
-          <div className=" flex-shrink-0 w-full shadow-2xl bg-cyan-100">
+          <div className=" flex-shrink-0 w-full shadow-2xl form-bg">
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Full Name</span>
+                  <span className="label-text whiteColor">Full Name</span>
                 </label>
                 <input
                   type="text"
@@ -87,7 +87,7 @@ const Register = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Photo URL</span>
+                  <span className="label-text whiteColor">Photo URL</span>
                 </label>
                 <input
                   type="text"
@@ -99,7 +99,7 @@ const Register = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text whiteColor">Email</span>
                 </label>
                 <input
                   type="text"
@@ -112,7 +112,7 @@ const Register = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text whiteColor">Password</span>
                 </label>
                 <input
                   type="password"
@@ -123,7 +123,7 @@ const Register = () => {
                   required
                 />
                 <label className="label">
-                  <Link href="#" className="label-text-alt link link-hover">
+                  <Link href="#" className="label-text-alt link link-hover whiteColor">
                     Forgot password?
                   </Link>
                 </label>
@@ -133,7 +133,7 @@ const Register = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                <button type="submit" className="btn btn-primary whiteColor">Sign Up</button>
                 
               </div>
             </div>

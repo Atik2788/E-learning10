@@ -7,7 +7,7 @@ const Blog = () => {
 
         <div>
         <div className="w-10/12 mx-auto mt-20">
-        <div className=" lg:flex bg-base-100 shadow-2xl p-0 lg:pl-10">
+        <div className=" lg:flex bg-base-100 shadow-2xl p-0 lg:pl-10 rounded-lg">
             <div className="w-2/5 mx-auto">
                 <figure>
                     <img src="https://media.tenor.com/g6ZKqhZUoQ8AAAAM/boy-cute.gif" alt="Album" />
@@ -15,8 +15,8 @@ const Blog = () => {
             </div>
 
           <div className="card-body">
-            <h2 className="card-title text-3xl font-bold">Have your any question??</h2>          
-            <p className="text-2xl font-bold text-center mt-5">Just ask!</p>    
+            <h2 className="card-title text-3xl font-bold darkWithText">Have your any question??</h2>          
+            <p className="text-2xl font-bold text-center mt-5 darkWithText">Just ask!</p>    
           </div>
 
         </div>        
