@@ -37,7 +37,7 @@ const CheckOut = () => {
         ></video>
       </div>
 
-      <div data-aos="" className="w-10/12 mx-auto mt-20">
+      <div data-aos="fade-up" className="w-10/12 mx-auto mt-20">
         <div className=" lg:flex bg-base-100 shadow-xl ">
             <div>
                 <figure>

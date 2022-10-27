@@ -33,9 +33,9 @@ const Home = () => {
             </div>
 
             <ShowMoreHome></ShowMoreHome>
-            <div  data-aos=""><About></About></div>
+            <div  data-aos="zoom-in"><About></About></div>
             <h2 className='text-center text-5xl font-bold mt-20 shadow-xl lg:w-2/5 mx-auto py-4'>Get in Touch</h2>
-            <div data-aos=""><Login></Login></div>
+            <div data-aos="zoom-in"><Login></Login></div>
             
 
 

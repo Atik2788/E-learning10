@@ -13,7 +13,7 @@ const CoursesRight = ({ course }) => {
   },[])
 
   return (
-    <div data-aos="" >
+    <div data-aos="fade-up" >
       <div className="rounded-xl w-94 bg-base-100 shadow-xl h-[475px]">
         <figure>
           <img className="h-[250px] rounded-t-xl mx-auto" src={url} alt="Shoes" />

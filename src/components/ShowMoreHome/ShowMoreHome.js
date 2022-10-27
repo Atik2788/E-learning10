@@ -15,7 +15,7 @@ const ShowMoreHome = () => {
             <p className="mb-5">
              Keep learning! It will helps you every single parts of life. Knowledge is the true friend of your. It will never harm you.
             </p>
-            <Link to='/blog'><button className="p-2 rounded-xl px-8 bg-primary text-2xl">Learn More</button></Link>
+            <Link to='/blog'><button className="btn btn-primary">Learn More</button></Link>
           </div>
         </div>
       </div>
