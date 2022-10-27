@@ -25,7 +25,7 @@ const CheckOut = () => {
       <div className="mt-20">
         <div className="text-center font-bold w-11/12 mx-auto">
           <h1 className="text-4xl">Congratulation !!</h1>
-          <h3 className="text-3xl mt-2">{user.displayName}</h3>
+          <h3 className="text-3xl mt-2 whiteColor">{user.displayName}</h3>
           <p className="text-2xl mt-2">You got lifetime access.</p>
         </div>
 
@@ -46,9 +46,9 @@ const CheckOut = () => {
             </div>
 
           <div className="card-body">
-            <h2 className="card-title">{name}</h2>
-            <p className="text-2xl font-bold">{title}</p>
-            <p>{details}</p>
+            <h2 className="card-title darkWithText">{name}</h2>
+            <p className="text-2xl font-bold darkWithText">{title}</p>
+            <p className="darkWithText">{details}</p>
             <div className="card-actions justify-center lg:justify-start mt-2">
               <Link to='/'><button className="btn btn-primary">Start Course</button></Link>
             </div>            

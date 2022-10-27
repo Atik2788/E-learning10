@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import DownloadPage from "../DownloadPage/DownloadPage";
@@ -14,7 +13,7 @@ const CartDetails = () => {
   return (
     <div className="mt-20 ">
       <div className=" text-center text-5xl mb-10 shadow-xl p-4">
-        <h1 className="mb-6">{title}</h1>
+        <h1 className="mb-6 ">{title}</h1>
         <DownloadPage
           roofElementId="pageToDownload"
           downloadFileName={name}
@@ -23,8 +22,8 @@ const CartDetails = () => {
 
       <div id="pageToDownload" className="mt-20">
         <div className="w-11/12 mx-auto">
-          <div className="rounded-t-xl w-full card-body bg-base-100 shadow-xl">
-            <h2 className="card-title text-5xl mb-10 font-bold mx-auto text-center">
+          <div className="rounded-t-xl w-full card-body bgDark shadow-xl">
+            <h2 className="card-title text-5xl mb-10 font-bold mx-auto text-center whiteColor">
               {name}
             </h2>
 
@@ -46,7 +45,7 @@ const CartDetails = () => {
                 <p className="font-bold mx-20">{students}</p>
               </div>
               <p className="font-bold text-2xl mt-2">{author}</p>
-              <span className="font-bold text-2xl">Price: {price}</span>
+              <span className="font-bold text-2xl whiteColor">Price: {price}</span>
 
               <div className="card-actions">
                 <button className="btn btn-primary mt-5">

@@ -16,7 +16,7 @@ const DownloadPage = ({roofElementId, downloadFileName}) => {
 
     return (
         <div>
-            <button onClick={downloadFileDocument}><FaDownload></FaDownload></button>
+            <button className='whiteColor' onClick={downloadFileDocument}><FaDownload></FaDownload></button>
         </div>
     );
 };

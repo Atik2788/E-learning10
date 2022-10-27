@@ -11,10 +11,10 @@ const ShowMoreHome = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="w-8/12 ">
-            <h1 className="mb-5 text-5xl font-bold">An investment in knowledge is always pays off!</h1>
-            <p className="mb-5">
+            <h1 className="mb-5 text-5xl font-bold"><span className="text-white">An investment in knowledge is always pays off!</span></h1>
+            <h3 className="mb-5">
              Keep learning! It will helps you every single parts of life. Knowledge is the true friend of your. It will never harm you.
-            </p>
+            </h3>
             <Link to='/blog'><button className="btn btn-primary">Learn More</button></Link>
           </div>
         </div>

@@ -78,34 +78,34 @@ const Login = () => {
 
   return (
     <div>
-      <Form onSubmit={handleSignIn} className="mt-20 lg:w-7/12 md:w-7/12 w-11/12 mx-auto">
-        <div className=" ">
+      <Form onSubmit={handleSignIn} className="mt-20 lg:w-7/12 md:w-7/12 w-11/12 mx-auto form-bg rounded-lg">
+        <div className="">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6 text-lg font-semibold">
               Are you new here? 
-              <span> <Link to='/register' className="text-green-700">Register</Link></span>
+              <span> <Link to='/register' className="color-text">Register</Link></span>
             </p>
 
 
           </div>
-          <div className=" shadow-2xl bg-base-100  bg-cyan-100">
+          <div className=" shadow-2xl bg-base-100 form-bg ">
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text whiteColor">Email</span>
                 </label>
                 <input
                   type="text"
                   placeholder="email"
                   name="email"
-                  className="input input-bordered"
+                  className="input input-bordered "
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text whiteColor">Password</span>
                 </label>
                 <input
                   type="password"
@@ -115,7 +115,7 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <Link href="#" className="label-text-alt link link-hover">
+                  <Link href="#" className="label-text-alt link link-hover whiteColor">
                     Forgot password?
                   </Link>
                 </label>
@@ -129,14 +129,14 @@ const Login = () => {
               </div>
 
               <div className="flex flex-col w-full border-opacity-50">
-                <div className="divider">OR</div>
+                <div className="divider whiteColor">OR</div>
               </div>
 
 
               <p className="flex text-center mx-auto">
-                <Link className="text-blue-700 md:mx-10 mx-4 lg:mx-10 text-4xl  " onClick={handleGoogleLogIn}><ImGoogle/></Link>
+                <Link className="iconColor md:mx-10 mx-4 lg:mx-10 text-4xl  " onClick={handleGoogleLogIn}><ImGoogle/></Link>
                 <Link className=" md:mx-10 lg:mx-10 text-4xl mx-4  " onClick={handleGitLogIn}><FaGithub/></Link>
-                <Link className="text-blue-700 md:mx-10 lg:mx-10 mx-4 text-4xl " onClick={handleFacebookLogIn}><FaFacebook/></Link>
+                <Link className="iconColor md:mx-10 lg:mx-10 mx-4 text-4xl " onClick={handleFacebookLogIn}><FaFacebook/></Link>
             </p>
 
 
