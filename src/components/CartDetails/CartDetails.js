@@ -52,7 +52,7 @@ const CartDetails = () => {
                   <Link
                     kye={id}
                     to={`/checkout/${id}`}
-                    >Go Premium</Link>
+                    >Get Premium Access</Link>
                 </button>
               </div>
             </div>
