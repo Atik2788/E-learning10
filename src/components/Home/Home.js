@@ -40,15 +40,13 @@ const Home = () => {
             <h2 className='text-center text-5xl font-bold mt-20 shadow-xl lg:w-2/5 mx-auto py-4'>Get in Touch</h2>
 
            <div>
-
            {
                 user?.uid?
                     <p className='text-center text-3xl mt-10'>Thank you! You already logged in our site..</p>
                :
                     <div data-aos="zoom-in"><Login></Login></div>
             }
-           </div>
-            
+           </div>         
 
 
         </div>

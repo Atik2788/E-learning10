@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Form, Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Form, Link, useLocation, useNavigate } from "react-router-dom";
 import { ImGoogle } from "react-icons/im";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
-import { useEffect } from "react";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 
 const Login = () => {
