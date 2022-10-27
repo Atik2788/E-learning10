@@ -81,7 +81,7 @@ const Login = () => {
       <Form onSubmit={handleSignIn} className="mt-20 lg:w-7/12 md:w-7/12 w-11/12 mx-auto form-bg rounded-lg">
         <div className="">
           <div className="text-center">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold pt-8">Login now!</h1>
             <p className="py-6 text-lg font-semibold">
               Are you new here? 
               <span> <Link to='/register' className="color-text">Register</Link></span>
