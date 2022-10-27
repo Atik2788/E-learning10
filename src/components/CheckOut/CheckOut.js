@@ -1,7 +1,9 @@
 import React from "react";
 import { useContext } from "react";
-import { FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 import welcomeVideo from "../../assets/sleek-welcome-background_wyfvvvz-s__f1bb1126d621e8323d2d2713ce6308bb__P360.mp4";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
@@ -11,6 +13,12 @@ const CheckOut = () => {
   const course = useLoaderData();
   const { url, price, title, details, author, name, ratings, students, id } =
     course;
+
+
+    useEffect(() =>{
+      AOS.init({duration: 1000})
+    },[])
+  
 
   return (
     <div>
@@ -29,7 +37,7 @@ const CheckOut = () => {
         ></video>
       </div>
 
-      <div className="w-10/12 mx-auto mt-20">
+      <div data-aos="" className="w-10/12 mx-auto mt-20">
         <div className=" lg:flex bg-base-100 shadow-xl ">
             <div>
                 <figure>

@@ -3,13 +3,22 @@ import { Link } from 'react-router-dom';
 import About from '../About/About';
 import Login from '../Sheared/Login/Login';
 import ShowMoreHome from '../ShowMoreHome/ShowMoreHome';
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Home = () => {
+
+    useEffect(() =>{
+        AOS.init({duration: 1000})
+      },[])
+
+
     return (
         <div>
-            <div className='lg:flex md:flex mt-32 w-11/12 mx-auto'>
-                <div className='w-7/12 '>
+            <div className='lg:flex md:flex mt-32 w-11/12 mx-auto '>
+                <div className='lg:w-11/12 md:w-2/4 md:text-left text-center lg:text-left mx-auto'>
                     <h1 className='text-5xl font-semibold'>Become an international 
                     <p className='text-orange-600 font-bold my-2'>3d artist</p> from anywhere.
                     </h1>
@@ -24,9 +33,10 @@ const Home = () => {
             </div>
 
             <ShowMoreHome></ShowMoreHome>
-            <About></About>
+            <div  data-aos=""><About></About></div>
             <h2 className='text-center text-5xl font-bold mt-20 shadow-xl lg:w-2/5 mx-auto py-4'>Get in Touch</h2>
-            <Login></Login>
+            <div data-aos=""><Login></Login></div>
+            
 
 
         </div>

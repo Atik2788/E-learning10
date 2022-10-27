@@ -1,11 +1,19 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const CoursesRight = ({ course }) => {
   const { name, url, title, ratings, price } = course;
+
+  useEffect(() =>{
+    AOS.init({duration: 1000})
+  },[])
+
   return (
-    <div>
+    <div data-aos="" >
       <div className="rounded-xl w-94 bg-base-100 shadow-xl h-[475px]">
         <figure>
           <img className="h-[250px] rounded-t-xl mx-auto" src={url} alt="Shoes" />
