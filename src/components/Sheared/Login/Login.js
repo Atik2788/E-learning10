@@ -78,7 +78,7 @@ const Login = () => {
 
   return (
     <div>
-      <Form onSubmit={handleSignIn} className="mt-20 w-7/12 mx-auto">
+      <Form onSubmit={handleSignIn} className="mt-20 lg:w-7/12 md:w-7/12 w-11/12 mx-auto">
         <div className=" ">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -134,9 +134,9 @@ const Login = () => {
 
 
               <p className="flex text-center mx-auto">
-                <Link className="text-blue-700 mx-10 text-4xl  " onClick={handleGoogleLogIn}><ImGoogle/></Link>
-                <Link className=" mx-10 text-4xl  " onClick={handleGitLogIn}><FaGithub/></Link>
-                <Link className="text-blue-700 mx-10 text-4xl " onClick={handleFacebookLogIn}><FaFacebook/></Link>
+                <Link className="text-blue-700 md:mx-10 mx-4 lg:mx-10 text-4xl  " onClick={handleGoogleLogIn}><ImGoogle/></Link>
+                <Link className=" md:mx-10 lg:mx-10 text-4xl mx-4  " onClick={handleGitLogIn}><FaGithub/></Link>
+                <Link className="text-blue-700 md:mx-10 lg:mx-10 mx-4 text-4xl " onClick={handleFacebookLogIn}><FaFacebook/></Link>
             </p>
 
 

@@ -56,7 +56,7 @@ const Register = () => {
 
   return (
     <div>
-      <Form onSubmit={handleSignUp} className="mt-20 w-9/12 mx-auto">
+      <Form onSubmit={handleSignUp} className="mt-20 w-11/12 md:w-9/12 lg:w-9/12 mx-auto">
         <div className="">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Register now!</h1>
@@ -71,7 +71,7 @@ const Register = () => {
             </p>
           </div>
 
-          <div className="card flex-shrink-0 w-full shadow-2xl bg-cyan-100">
+          <div className=" flex-shrink-0 w-full shadow-2xl bg-cyan-100">
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
