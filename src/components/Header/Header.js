@@ -17,7 +17,7 @@ const Header = () => {
     }
 
     return (
-        <div className='mt-0  sticky bg-opacity-80 bg-blue-50 bg-clip-padding  top-0 w-full blur-filter'>
+        <div className='mt-0 shadow-xl sticky bg-opacity-80 bg-blue-50 bg-clip-padding  top-0 w-full blur-filter'>
            <div className="navbar bg-base-500 ">
             
                 <div className=" navbar">

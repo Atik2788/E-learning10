@@ -134,9 +134,9 @@ const Login = () => {
 
 
               <p className="flex text-center mx-auto">
-                <Link className="text-green-600 mx-10" onClick={handleGoogleLogIn}><ImGoogle/></Link>
-                <Link className=" mx-10" onClick={handleGitLogIn}><FaGithub/></Link>
-                <Link className="text-blue-700 mx-10" onClick={handleFacebookLogIn}><FaFacebook/></Link>
+                <Link className="text-blue-700 mx-10 text-4xl  " onClick={handleGoogleLogIn}><ImGoogle/></Link>
+                <Link className=" mx-10 text-4xl  " onClick={handleGitLogIn}><FaGithub/></Link>
+                <Link className="text-blue-700 mx-10 text-4xl " onClick={handleFacebookLogIn}><FaFacebook/></Link>
             </p>
 
 
