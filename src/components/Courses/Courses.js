@@ -42,6 +42,7 @@ const Courses = () => {
             <Link key={course.id} to={`/cartdetails/${course.id}`}><CoursesRight key={course.id} course={course}></CoursesRight></Link>
           ))}
         </div>
+        
       </div>
     </div>
   );

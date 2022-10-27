@@ -8,8 +8,9 @@ import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 const Register = () => {
   const navigate = useNavigate();
 
-  const {signUp, user, setUser} = useContext(AuthContext)
+  const {signUp, user, setUser, profileUpdate} = useContext(AuthContext)
 
+  
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: ''
@@ -22,7 +23,13 @@ const Register = () => {
 
   })
 
+  // const updateProfile(profileUpdate, {
 
+  // })
+   
+
+
+  // sign up
   const handleSignUp = (event) =>{
     event.preventDefault();
     const form = event.target;
@@ -30,12 +37,9 @@ const Register = () => {
     const password =form.password.value;
     form.reset()
 
-
     signUp(userInfo.email, userInfo.password)
     .then(result =>{
-      const user = result.user;
-      
-
+      const user = result.user;    
 
       console.log(user);
       setErrors({...errors, general: ""})
@@ -45,7 +49,6 @@ const Register = () => {
       if(user){
         navigate('/')
       }
-
 
       setErrors({...errors, general: ''});
       

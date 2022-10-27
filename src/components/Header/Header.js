@@ -37,7 +37,7 @@ const Header = () => {
                         {   user?.uid?
                         <>                        
                             {
-                                !user?.photoURL?
+                                !user.photoURL?
                                 <>
                                  {
                                     user?.displayName?
@@ -83,7 +83,7 @@ const Header = () => {
                         { user?.uid?
                         <>                        
                             {
-                                !user?.photoURL?
+                                !user.photoURL?
                                 <>
                                  {
                                     user?.displayName?
