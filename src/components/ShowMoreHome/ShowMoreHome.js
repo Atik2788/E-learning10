@@ -6,7 +6,7 @@ const ShowMoreHome = () => {
     <div className="mt-20">
       <div
         className="hero min-h-screen"
-        style={{ backgroundImage: `url("https://i.ibb.co/PFncnVd/teamcoaching2.webp")` }}
+        style={{ backgroundImage: `url("https://i.ibb.co/wWvzChV/teamcoaching2.webp")` }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
